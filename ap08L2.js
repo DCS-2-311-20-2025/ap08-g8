@@ -164,4 +164,11 @@ export function render(scene, car) {
     car.lookAt(carTarget);
     camera.lookAt(car.position.x, car.position.y, car.position.z);
     renderer.render(scene, camera);
+
+    //カメラ位置
+carPosition.lerpVectors(carTarget,carPosition,4);
+      carPosition.y += 2.5;
+      camera.position.copy(carPosition);
+      camera.lookAt(car.position); // 車を見る
+      camera.up.set(0,1,0); // カメラの上をy軸正の向きにする
 }
