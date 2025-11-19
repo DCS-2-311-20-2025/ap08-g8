@@ -166,7 +166,7 @@ export function render(scene, car) {
     renderer.render(scene, camera);
 
     //カメラ位置
-carPosition.lerpVectors(carTarget,carPosition,4);
+carPosition.lerpVectors(carTarget,carPosition,5);
       carPosition.y += 2.5;
       camera.position.copy(carPosition);
       camera.lookAt(car.position); // 車を見る
