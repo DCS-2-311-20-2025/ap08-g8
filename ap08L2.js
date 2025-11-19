@@ -93,7 +93,7 @@ export function init(scene, size, id, offset, texture) {
         }), false
     )
     //  曲線から100箇所を取り出し、円を並べる
-    const points = course.getPoints(100);
+    const points = course.getPoints(1000);
     points.forEach((point) => {
         const road = new THREE.Mesh(
             new THREE.CircleGeometry(5,16),
